@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Image Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background-color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    .language-switcher {
+      font-size: 1rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .image-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .image-card:hover {
+      transform: scale(1.02);
+    }
+    .image-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .image-card .download {
+      display: block;
+      text-align: center;
+      padding: 0.5rem;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+    }
+    .image-card .download:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AI Image Gallery</h1>
+    <select class="language-switcher" onchange="switchLanguage(this.value)">
+      <option value="en" selected>English</option>
+      <option value="ar">Arabic</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+    </select>
+  </header>
+
+  <main class="gallery">
+    <div class="image-card">
+      <img src="https://placekitten.com/400/300" alt="Cute Kitten" />
+      <a href="https://placekitten.com/400/300" download class="download">Download</a>
+    </div>
+    <div class="image-card">
+      <img src="https://placehold.co/400x300?text=Nature" alt="Nature AI Image" />
+      <a href="https://placehold.co/400x300?text=Nature" download class="download">Download</a>
+    </div>
+    <div class="image-card">
+      <img src="https://placehold.co/400x300?text=Anime" alt="Anime AI Image" />
+      <a href="https://placehold.co/400x300?text=Anime" download class="download">Download</a>
+    </div>
+    <div class="image-card">
+      <img src="https://placehold.co/400x300?text=Football" alt="Football AI Image" />
+      <a href="https://placehold.co/400x300?text=Football" download class="download">Download</a>
+    </div>
+  </main>
+
+  <script>
+    function switchLanguage(lang) {
+      alert("Language switched to: " + lang + "\n(Translation functionality coming soon!)");
+    }
+  </script>
+</body>
+</html>
